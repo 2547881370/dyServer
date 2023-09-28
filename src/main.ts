@@ -6,9 +6,8 @@ import { TransformInterceptor } from './common/Interceptor/transform.interceptor
 import * as fs from 'fs';
 
 const httpsOptions = {
-  ca: fs.readFileSync('/project/dyServer/cat/ca.crt'),
-  key: fs.readFileSync('/project/dyServer/cat/server.key'),
-  cert: fs.readFileSync('/project/dyServer/cat/server.crt')
+  ca: fs.readFileSync('/project/dyServer/cat/cert.pem'),
+  key: fs.readFileSync('/project/dyServer/cat/private.key')
 };
 
 async function bootstrap() {
